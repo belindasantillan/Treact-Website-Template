@@ -375,6 +375,49 @@ header {
     margin-bottom: 24px;
 }
 
+/* VALUES */
 
+.row__values {
+    display: flex;
+}
+
+.values__content--wrapper {
+    width: 50%;
+    margin-right: 48px;
+}
+
+.values__list--wrapper {
+    display: flex;
+    margin: 40px 0;
+}
+
+.values__principles--wrapper {
+    margin-right: 28px;
+}
+
+.values__title--wrapper {
+    margin-bottom: 20px;
+}
+
+.values__principles--title {
+    display: flex;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.values__principles--para {
+    line-height: 1.5;
+    color: gray;
+    font-weight: 400;
+}
+
+.values__figure--wrapper {
+    width: 50%;
+    display: flex;
+}
+
+.values__img {
+    width: 100%;
+}
 
 
