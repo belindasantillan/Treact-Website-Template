@@ -13,6 +13,7 @@ html {
 
 a {
     text-decoration: none;
+    position: relative;
 }
 
 li {
@@ -63,6 +64,10 @@ li {
     font-size: 18px;
 }
 
+.not__allowed {
+    cursor: not-allowed;
+}
+
 /* NAVIGATION */
 
 #landing {
@@ -90,14 +95,24 @@ nav {
     font-weight: 500;
 }
 
-.nav__link--regular {
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color:#6415ff;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+    opacity: 0;
     transition: all 300ms ease;
 }
 
-.nav__link--regular:hover {
+.link__hover-effect:hover:after {
+    opacity: 1;
+}
+
+.link__hover-effect:hover {
     color: #6415ff;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
 }
 
 .nav__link--login {
@@ -401,12 +416,46 @@ header {
 
 .values__title--wrapper {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon__wrapper--professionalism, .icon__wrapper--affordable {
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    width: 20%;
+}
+
+.icon__wrapper--affordable {
+    background-color: lightgreen;
+}
+
+.icon__wrapper--professionalism {
+    background-color: lightcoral;
+}
+
+.values__icon--affordable, .values__icon--professionalism {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.values__icon--affordable {
+    color: darkgreen;
+}
+
+.values__icon--professionalism {
+    color: darkred;
 }
 
 .values__principles--title {
     display: flex;
     font-size: 20px;
     margin-left: 8px;
+    width: 80%;
 }
 
 .values__principles--para {
@@ -558,6 +607,11 @@ header {
     width: 55%;
 }
 
+.ratings {
+    margin-top: 40px;
+    color: #fda93b;
+}
+
 .testimonial__title {
     margin: 32px 0 16px 0;
     font-size: 20px;
@@ -577,14 +631,15 @@ header {
 
 .user__img--wrapper {
     display: flex;
-}
-
-.user__img {
-    width: 100%;
     width: 75px;
     height: 75px;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.user__img {
+    width: 100%;
+    transform: scale(1.20);
 }
 
 .user__content--wrapper {
@@ -742,6 +797,25 @@ footer {
     font-size: 20px;
     font-weight: 800;
 }
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__social--wrapper {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+.footer__icon {
+    color: #000;
+}
+
+
 
 /* RESPONSIVENESS */
 
